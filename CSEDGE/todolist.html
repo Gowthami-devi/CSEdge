@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<link rel="stylesheet" href="todolist.css"></link>
+</head>
+<body>
+<h1>To-Do List</h1>
+<input type="text" id="taskInput" placeholder="Add new task">
+<input type="number" id="priorityInput" placeholder="Priority (1-5)">
+<input type="date" id="dueDateInput">
+<button onclick="addTask()">Add Task</button>
+<hr>
+<div>
+    <label for="sortSelect">Sort By:</label>
+    <select id="sortSelect" onchange="sortTasks()">
+        <option value="default">Default</option>
+        <option value="priority">Priority</option>
+        <option value="duedate">Due Date</option>
+        <option value="completed">Completed</option>
+    </select>
+</div>
+<ul id="taskList" class="task-list">
+    <!-- Tasks will be added dynamically here -->
+</ul>
+</body>
+<script src="todolist.js"></script>
+</html>
